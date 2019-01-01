@@ -1,5 +1,7 @@
 const mix = require('laravel-mix');
 
+mix.browserSync({proxy: 'roman.test'});
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -10,6 +12,12 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
+
+// mix.styles([
+//     'resources/assets/css/lib/admin/*'
+// ], 'public/css/admin-lib.css');
+
+mix.js('resources/js/home.js', 'public/js').version().sourceMaps();
 
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');
