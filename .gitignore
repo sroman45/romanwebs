@@ -23,7 +23,7 @@ public/js/
 /public/category-thumbnails
 /storage/*.key
 /vendor
-/.idea
+/.idea/*
 /.vscode
 /.vagrant
 Homestead.json
